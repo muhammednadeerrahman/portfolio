@@ -16,11 +16,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = 'your-secret-key'  # Update this with a secure random value
+SECRET_KEY = 'django-insecure-cr&%#(88u*&dliwe7e^7qr6-*09d^xxjox#4a!!@df4m30!_we'
 
-DEBUG = False  # Set this to False in production
+DEBUG = False
 
-ALLOWED_HOSTS = ['your-vercel-deployment-url.vercel.app']  # Add your Vercel deployment URL here
+ALLOWED_HOSTS = ['your-vercel-deployment-url.vercel.app']
 
 
 INSTALLED_APPS = [
@@ -99,11 +99,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'  # Update the static URL
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-MEDIA_URL = '/media/'  # Update the media URL
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
