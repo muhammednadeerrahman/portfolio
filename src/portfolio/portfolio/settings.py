@@ -18,9 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-cr&%#(88u*&dliwe7e^7qr6-*09d^xxjox#4a!!@df4m30!_we'
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['your-vercel-deployment-url.vercel.app']
+ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
-    'web'
+
+    "web"
 ]
 
 MIDDLEWARE = [
@@ -65,16 +66,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfolio',
-        'USER': 'postgres',
-        'PASSWORD': 'nadeer@4557',
-        'HOST': 'localhost',
-        'PORT': ''
-    }
+        		'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        		'NAME': 'portfolio',
+        		'USER' : 'postgres',
+        		'PASSWORD' : 'nadeer@4557',
+        		'HOST'  : 'localhost',
+        		'PORT' : ''
+    		}
 }
+
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -91,6 +96,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -99,11 +105,17 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
+
+
+
+
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-MEDIA_URL = '/media/'
+MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
